@@ -40,9 +40,6 @@ class HonorarRechnerTest {
 	    @Test                                               
 	    @DisplayName("Price Calculation Test")   
 	    public void testPriceCalculation() {
-	    	
-	    	
-	    	
 	        assertEquals(4.21,verlag.textToEuro(this.text), "Calculation failed");
 	    }
 	    
