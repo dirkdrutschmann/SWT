@@ -15,26 +15,26 @@ class TaxTest {
 
     @Test                                               
     @DisplayName("Get Tax")   
-    public void testAddition() {
+    public void testGetTax() {
     	System.out.print(tax.getTax(1.99));
         assertEquals(0.32,tax.getTax(1.99), "Failed to get TAX");
     }
     
     @Test                                               
     @DisplayName("Add Tax")   
-    public void testSubstraktion() {
+    public void testAddTax() {
         assertEquals(1.99,tax.addTax(1.67), "Failed to add TAX");
     }
     
     @Test                                               
     @DisplayName("Get without Tax")   
-    public void testDivision() {
+    public void testWithoutTax() {
         assertEquals(1.67,tax.getWithoutTax(1.99), "Failed to get without TAX");
     }
     
     @Test                                               
     @DisplayName("negative price")   
-    public void testDivisionByZero() {
+    public void testNegativePrice() {
         assertThrows(IllegalArgumentException.class, ()->tax.getTax(-1.99));
     }
     
