@@ -16,7 +16,6 @@ class TaxTest {
     @Test                                               
     @DisplayName("Get Tax")   
     public void testGetTax() {
-    	System.out.print(tax.getTax(1.99));
         assertEquals(0.32,tax.getTax(1.99), "Failed to get TAX");
     }
     
