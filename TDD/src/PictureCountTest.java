@@ -48,6 +48,12 @@ private Verlagshaus verlag;
 	    public void testCapital() {
 	        assertEquals(1,verlag.countPictures("Picture"), "Calculation failed");
 	    }
+
+		@Test                                               
+	    @DisplayName("Null Testing")   
+	    public void testNull() {
+	        assertThrows(IllegalArgumentException.class, ()->verlag.textToEuro(null));
+	    }
 	    
 
 }

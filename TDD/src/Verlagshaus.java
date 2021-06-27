@@ -16,6 +16,9 @@ public class Verlagshaus {
 	}
 
 	public int countPictures(String text) {
+        if(text == null) {
+			throw new IllegalArgumentException("String can't be null!");
+		}
 		text = text.toLowerCase();
 		Matcher m = Pattern.compile("(?=(picture))").matcher(text);
 		List<Integer> pos = new ArrayList<Integer>();
